@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    tools:context=".presentation.MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstpoly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="first polynom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/firstpolyedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secondpoly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="second polynom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstpoly">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/secondpolyedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="result"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondpoly" />
+
+    <Button
+        android:id="@+id/multiply_button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="203dp"
+        android:layout_height="64dp"
+        android:layout_margin="4dp"
+        android:text="x"
+        android:backgroundTint="#ffc947"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/plus_button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="190dp"
+        android:layout_height="64dp"
+        android:layout_margin="4dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="4dp"
+        android:text="+"
+        android:backgroundTint="#ffc947"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
